@@ -727,6 +727,10 @@ export function retrieveSchema(schema, rootSchema = {}, formData = {}) {
 function resolveDependencies(schema, rootSchema, formData) {
   // Drop the dependencies from the source schema.
   let { dependencies = {}, ...resolvedSchema } = schema;
+
+  console.log("resolveDependencies dependencies", dependencies);
+  console.log("resolveDependencies resolvedSchema", resolvedSchema);
+
   if ("oneOf" in resolvedSchema) {
     resolvedSchema =
       resolvedSchema.oneOf[

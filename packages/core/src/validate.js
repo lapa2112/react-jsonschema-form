@@ -299,6 +299,9 @@ export function withIdRefPrefix(schemaNode) {
  * false.
  */
 export function isValid(schema, data, rootSchema) {
+  console.log("isValid schema", schema);
+  console.log("isValid data", data);
+
   try {
     // add the rootSchema ROOT_SCHEMA_PREFIX as id.
     // then rewrite the schema ref's to point to the rootSchema
